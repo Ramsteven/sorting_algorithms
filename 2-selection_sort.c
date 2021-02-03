@@ -1,14 +1,14 @@
 #include "sort.h"
 
 /**
- *  bubble_sort- Entry point
+ *  selection_sort- Entry point
  *
  * @array: array gives
  * @size: size of array
  * Return: Always 0
  */
 void selection_sort(int *array, size_t size)
-{	
+{
 	size_t i;
 	size_t y;
 	int tmp = 0;
@@ -18,7 +18,7 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 	{
-		for(y = i; y < size; y++)
+		for (y = i; y < size; y++)
 		{
 			if (array[i] > array[y])
 			{

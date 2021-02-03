@@ -9,24 +9,27 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i;
-	size_t y;
+	size_t i, y, n;
 	int tmp = 0;
 
-	if (!array || !size)
+	if (!array || size < 2)
 		return;
 
 	for (i = 0; i < size; i++)
 	{
+		n = i;
 		for (y = i; y < size; y++)
 		{
 			if (array[i] > array[y])
-			{
-				tmp = array[i];
-				array[i] = array[y];
-				array[y] = tmp;
-			}
+				n = y;
 		}
-		print_array(array, size);
+
+			if (n != i)
+		{
+				tmp = array[i];
+				array[i] = array[n];
+				array[n] = tmp;
+				print_array(array, size);
+		}
 	}
 }
